@@ -25,7 +25,7 @@
         },
         methods: {
             initialMount() {
-                Echo.channel('App.User.' + window.Laravel.id)
+                Echo.private('App.User.' + window.Laravel.id)
                 .listen('GiveNotice', (res) => {
                     console.log(res);
                 });
